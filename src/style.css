@@ -1,6 +1,7 @@
 
 
   
+  
 *,::before,::after {
   /* *, *:before, *:after {*/
   -webkit-box-sizing: border-box;
@@ -9,7 +10,24 @@
   text-align: center;
   font-family: Arial;
 }
-
+.allFields img {
+  max-width: 8rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.allFields aside{
+  padding: .5rem;
+  width: 100%;
+}
+.form-column {display: block;}
+.form-fields {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.form-fields div {
+  margin: 2rem;
+}
 .maxw {
   max-width:65em;
   margin: 0 auto;
@@ -60,7 +78,6 @@ aside nav a.activo {
 aside nav a svg {
     margin-right: .8em;
 }
-
 .completeForm {
   padding: 1em 1.5em;
   background: white;
@@ -69,7 +86,6 @@ aside nav a svg {
 .completeForm p {
     display:flex;
 }
-
 form {
   width:100%
   
@@ -109,7 +125,6 @@ input:focus {
 input:focus:invalid {
   border-color:orange;
 }
-
 .completeForm .item h3 {
   display:block;
   border-bottom: 1.5px solid #2face0;
@@ -118,7 +133,6 @@ input:focus:invalid {
   letter-spacing: .05em;
   
 }
-
 .completeForm aside {
   padding-right:2em;
 }
@@ -151,9 +165,6 @@ input:focus:invalid {
 .completeForm aside a:hover span {
   opacity:1;
 }
-input#email {
-    width: 120%;
-}
 .completeForm .clear input {
   float:right;
 }
@@ -169,7 +180,6 @@ input#email {
   display:flex;
   align-items: flex-start;
 }
-
 .sendButton {
     background: #1394c9;
     border-color: #1394c9;
@@ -178,4 +188,15 @@ input#email {
 }
 .sendButton svg {
   fill:white
+}
+@media only screen and (max-width: 1200px){
+  .completeForm, .allFields {
+    display: block !important;
+  }
+  .form-fields {
+    display: block;
+  }
+  form .div {
+    display: block;
+  }
 }

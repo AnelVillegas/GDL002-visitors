@@ -24,59 +24,12 @@
       </div>
      </header>
     </section>
-    <section id="registerNewone">
-      <div class="register">
-        <span><h2>REGISTRO DE CO-WORKERS</h2></span>
-        <div class="completeForm">
-        <p>
-           <!--<div class="informationForm">-->
-            <!--<div class="slide">-->
-              <div class="item">
-                 <h3>Información personal</h3>
-                  <div class="allFields">
-                   <aside>
-                    <a href="#">
-                     <svg class="imgperfil" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="90" height="90">
-                      <path class="heroicon-ui" d="M12 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm9 11a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3H8a3 3 0 0 0-3 3v2a1 1 0 0 1-2 0v-2a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v2z"/></svg>
-                        <span>Subir imagen de perfil</span>
-                    </a>
-                   </aside>
-                   
-                      <form>
-                        <div class="double">
-                          <div class="field">
-                            <label for="name">Nombre*</label>
-                            <input required type="text" id="name"/>
-                          </div>
-                          <div class="field">
-                            <label for="lastName">Apellido*</label>
-                            <input required type="text" id="lastName"/>
-                          </div>
-                        </div>
+    <div id="root">
+     <div id="newCoworker"></div>
+    </div>    
 
-                        <div class="double">
-                          <div class="field">
-                            <label for="celphone">Celular*</label>
-                            <input required type="tel" minlength="10" maxlength="14" id="celPhone"/>
-                          </div>
-                          <div class="field">
-                            <label for="email">Email</label>
-                            <input type="email" pattern="[^ @]+@[^ @]+.[a-z]+" id="email"/>
-                          </div>
-                        </div>
-
-                          <div class="double">
-                                <div class="field">
-                                  <label for="company">Empresa</label>
-                                  <input type="text" id="company"/>
-                                </div>
-                               
-                              </div>
-                        <input id="sendButton" type="submit" class="sendButton" value="Guardar">
-                      </form>
-                    </div>
-                  </div>
-
+      <script src="photoFunction.js"></script>
+      <script src="newCoworker.js"></script>
       <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
       <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
       <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
