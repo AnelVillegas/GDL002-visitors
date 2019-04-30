@@ -27,13 +27,14 @@ const sendButton = document.querySelector('#sendButton');
     let celPhone = document.querySelector ('#celPhone').value;
     let email = document.querySelector('#email').value;
     let company = document.querySelector('#company').value;
-    //let photo = docuemnt.querySelector(')
+    
     db.collection("coworkers").add({
         name: name,
         lastName: lastName,
         celphone: celPhone,
         email: email,
         company: company,
+        
     })
     .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
