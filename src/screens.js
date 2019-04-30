@@ -23,8 +23,18 @@ let visitorScreen = `
                
                   <form>
                     <div class="form-column">
-                        <img src ="http://barcarena.pa.gov.br/portal/img/perfil/padrao.jpg  "></img>
+                    <img src ="http://barcarena.pa.gov.br/portal/img/perfil/padrao.jpg  "></img>
+                    <div class="camera">
+                    <video id="video">Video stream not available</video>
+                    <button id="cameraBtn">Take a selfie</button>
+                    </div>
+                    <canvas id="canvas">
+                    </canvas>
+                    <div class="output" hidden>
+                    <img id="photo" alt="The screen capture will appear in this box">
+                    </div>
                         <div class="form-fields">
+
                         <div>
                         <label for="name">Nombre Completo*</label>
                         <input required type="text" id="visitorName"/>
