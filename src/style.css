@@ -200,3 +200,79 @@ input:focus:invalid {
     display: block;
   }
 }
+
+/*estilo de pantalla*/
+
+  
+main {
+  min-height: 25rem;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row;
+}
+
+main > article {
+  margin: 4px;
+  padding: 5px;
+  /* border: 0.187rem solid rgba(0, 0, 0, 0.6);*/
+  border-radius: 0.625rem;
+  background: rgba(255, 255, 255, 0.9);
+  flex: 3 1 60%;
+  order: 2;
+}
+
+main > nav {
+  margin: 0.25rem;
+  padding: 0.312rem;
+  /* border: 0.187rem solid rgba(0, 0, 0, 0.6);*/
+  border-radius: 0.625rem;
+  background: rgba(255, 255, 255, 0.9);
+  flex: 1 6 20%;
+  order: 1;
+}
+
+
+
+header,
+footer {
+  display: block;
+  margin: 0.25rem;
+  padding: 0.312rem;
+  min-height: 6.25rem;
+ /* border: 0.187rem solid rgba(0, 0, 0, 0.6);*/
+  border-radius: 0.625rem;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Too narrow to support three columns */
+
+@media all and (max-width: 640px) {
+  main,
+  page {
+    flex-direction: column;
+  }
+
+  main > article,
+  main > nav,
+  main > aside {
+    /* Return them to document order */
+    order: 0;
+  }
+
+  main > nav,
+  main > aside,
+  header,
+  footer {
+    min-height: 3.125rem;
+    max-height: 3.125rem;
+  }
+}
+
+.logo{
+  width: 9rem; height: 9rem;
+}
+
+.foto{
+  width: 35rem; height: 25rem;
+}
