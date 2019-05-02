@@ -74,3 +74,49 @@ signUpVisitor.addEventListener("click", () => {
     }
 );
 
+//función para que aprezcan los nombres de los coworkers en el selector de la vista de visitante
+let selector = document.querySelector('#coWorkerName');
+db.collection("coworkers").get().then((querySnapshot) => {
+   selector.innerHTML='';
+  querySnapshot.forEach((doc) => {
+      //console.log(`${doc.id} => ${doc.data()}`);
+      selector.innerHTML += `
+      <option>${doc.data().name}  ${doc.data().lastName} </option>
+      `
+  }); 
+});
+
+//función para leer los datos de historico
+let table = document.querySelector('#summary');
+  db.collection("visitor").get().then((querySnapshot) => {
+     table.innerHTML='';
+    querySnapshot.forEach((doc) => {
+      console.log(`${doc.id} => ${doc.data()}`);
+      table.innerHTML += `
+      <tr>
+     <th scope="col">${doc.data().visitorName}</th>
+     <td>${doc.data().coworker}</td>
+     <td>${doc.data().arriveTime}</td>
+     </tr>
+        `
+    }); 
+});
+
+//función para tabla de coworkers registrados
+let register = document.querySelector('#registerCoworker');
+  db.collection("coworkers").get().then((querySnapshot) => {
+     register.innerHTML='';
+    querySnapshot.forEach((doc) => {
+      console.log(`${doc.id} => ${doc.data()}`);
+      register.innerHTML += `
+      <tr>
+     <th scope="col">${doc.data().name}</th>
+     <td>${doc.data().lastName}</td>
+     <td>${doc.data().celphone}</td>
+     <td>${doc.data().email}</td>
+     <td>${doc.data().company}</td>
+     </tr>
+        `
+    }); 
+});
+
