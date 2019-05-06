@@ -15,7 +15,7 @@ historial.addEventListener("click", function(){
 });
 coWorkers.addEventListener("click", function(){
     document.getElementById("adminContainer").style.display = "none";
-    document.getElementById("historiContainer").style.display = "block";
+    document.getElementById("coWorkerContainer").style.display = "block";
 });
 
 
@@ -39,7 +39,8 @@ var config = {
 
 
 //Agregar información de visitante
-signUpVisitor.addEventListener("click", () => {
+signUpVisitor.addEventListener("click", (e) => {
+    e.preventDefault(e);
     
     let name = document.querySelector('#visitorName').value;
     let email = document.querySelector('#visitorEmail').value;
@@ -57,7 +58,16 @@ signUpVisitor.addEventListener("click", () => {
         exitTime: timeOut || '00:00:00',
         photo:photoUrl
     })
-    .then(function(docRef) {
+    .then(function(docRef) { 
+        Email.send({
+            SecureToken : "bfcd0384-8e4b-4639-9ad6-22a9c5fcfba9",
+            To : host,
+            From : "apps@claudiagarfias.works",
+            Subject : "This is the subject",
+            Body : `Hola, ya llegó ${name}. Te está esperando en la recpeción.`,
+        }).then(
+          message => alert(message)
+        );
         console.log("Document written with ID: ", docRef.id);
     })
     .catch(function(error) {
@@ -74,14 +84,15 @@ db.collection("coworkers").get().then((querySnapshot) => {
   querySnapshot.forEach((doc) => {
       //console.log(`${doc.id} => ${doc.data()}`);
       selector.innerHTML += `
-      <option>${doc.data().name}  ${doc.data().lastName} </option>
+      <option value="${doc.data().email}">${doc.data().name}  ${doc.data().lastName} </option>
       `
   }); 
 });
 
 
 //Agregar información coworker
-registerCoworker.addEventListener("click", () => {
+registerCoworker.addEventListener("click", (e) => {
+    e.preventDefault(e);
     let name = document.querySelector('#name').value;
     let lastName = document.querySelector('#lastName').value;
     let celPhone = document.querySelector ('#celPhone').value;
