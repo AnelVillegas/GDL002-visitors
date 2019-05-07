@@ -13,7 +13,7 @@
     <section class="homeContainer" id="homeContainer">
         <div class="container" >
             <div class="card">
-                <img src="../src/img/logo.png" class="logo">
+                <img src="./img/logo.png" class="logo">
                 <p class="welcometext">Gestión de visitas fácil de usar</p>
             <div>
             <button class="btnOpcion" id="visitor">Visitante</button>
@@ -23,10 +23,9 @@
         </div>
     </section>
 <!-- Pagina Visitante --> 
-
     <section id="visitorContainer">
-            <header><img class="logo" src="../src/img/logo.png">
-                
+            <header><img class="logo" src="./img/logo.png">
+              <button class="panel" id="goBack">Volver</button>    
             </header>
                    <div id="registerNewone" class="register"></div>
                    <span><h2>Bienvenido Visitante</h2></span>
@@ -73,12 +72,11 @@
       </section>
     </section>
     <!-- Pagina Administrador--> 
-
     <section id="adminContainer" class="adminContainer">
     <header id="cab"><img class="logo" src="./img/logo.png">
         <button class="panel" id="coWorkers">Empleados Registrados</button>
         <button class="panel" id="historial">Historico de Visitantes</button>
-        <button class="panel" id="regresar">Volver</button>
+        <button class="panel" id="admiToHome">Volver</button>
     </header>
      <!-- Pagina registro de coworkers-->    
      <section id="registerNewone" class="registerNewone">
@@ -113,13 +111,11 @@
                       </div> 
                     </section>
     </section>
-
-
  <!--TABLA DE HITORICO DE VISITANTES-->
- <div id="historiContainer" class="historiContainer"> 
+ <section id="historiContainer" class="historiContainer"> 
         <header id="cab"><img class="logo" src="./img/logo.png">
-            <button class="panel" id="registra">Registro de empleados</button>
-            <button class="regresar" id="Volver">Cerrar sesion</button>
+            <button class="panel" id="historicView">Registro de Empleadores</button>
+            <button class="regresar" id="hisToHome">regresar</button>
          </header>
     <table class="table table-bordered">
       <thead>
@@ -127,6 +123,7 @@
       <th scope="col">Nombre del visitante</th>
       <th scope="col">Nombre del coworker</th>
       <th scope="col">Fecha y Hora</th>
+    <!--  <th scope="col">Foto</th> -->
      </tr>
     </thead>
     <tbody id="summary">
@@ -137,15 +134,13 @@
      </tr>
      </tbody>
     </table>
-   </div>      
-
+  </section>  
     <!--TABLA DE COWORKERS REGISTRADOS-->
     <div id="coWorkerContainer" class="coWorkerContainer"> 
-            <header id="cab"><img class="logo" src="../src/img/logo.png">
+            <header id="cab"><img class="logo" src="./img/logo.png">
                 <button class="panel" id="registra">Registro de empleados</button>
-                <button class="regresar" id="Volver">Cerrar sesion</button>
+                <button class="panel" id="cowToHome">Regresas</button>
              </header>
-
         
         <table class="table table-bordered">
           <thead>

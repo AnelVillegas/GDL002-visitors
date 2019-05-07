@@ -1,4 +1,5 @@
 /*botones de pantalla de inicio*/
+/*botones de cambio de pantalla*/
 visitor.addEventListener("click", function(){
     document.getElementById("homeContainer").style.display = "none";
     document.getElementById("visitorContainer").style.display = "block";
@@ -7,7 +8,6 @@ admin.addEventListener("click", function(){
     document.getElementById("homeContainer").style.display = "none";
     document.getElementById("adminContainer").style.display = "block";
             });
-
             
 historial.addEventListener("click", function(){
     document.getElementById("adminContainer").style.display = "none";
@@ -15,8 +15,34 @@ historial.addEventListener("click", function(){
 });
 coWorkers.addEventListener("click", function(){
     document.getElementById("adminContainer").style.display = "none";
-    document.getElementById("coWorkerContainer").style.display = "block";
+    document.getElementById("historiContainer").style.display = "block";
 });
+
+goBack.addEventListener("click",function(){
+    document.getElementById("visitorContainer").style.display="none";
+    document.getElementById("homeContainer").style.display="block";
+});
+
+historicView.addEventListener("click", function(){
+    document.getElementById("historiContainer").style.display="none";
+    document.getElementById("coWorkerContainer").style.display="block";
+});
+
+
+hisToHome.addEventListener("click",function(){
+    document.getElementById("visitorContainer").style.display="none";
+    document.getElementById("adminContainer").style.display="block";
+});
+
+cowToHome.addEventListener("click",function(){
+    document.getElementById("coWorkerContainer").style.display="none";
+    document.getElementById("adminContainer").style.display="block";
+})
+
+admiToHome.addEventListener("click",function(){
+    document.getElementById("adminContainer").style.display="none";
+    document.getElementById("homeContainer").style.display="block";
+})
 
 
 
