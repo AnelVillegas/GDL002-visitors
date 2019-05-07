@@ -145,7 +145,7 @@ registerCoworker.addEventListener("click", (e) => {
 
      //función para leer los datos de historico
 let table = document.querySelector('#summary');
-db.collection("visitor").get().then((querySnapshot) => {
+db.collection("visitor").onSnapshot((querySnapshot) => {
    table.innerHTML='';
   querySnapshot.forEach((doc) => {
     console.log(`${doc.id} => ${doc.data()}`);
@@ -161,7 +161,7 @@ db.collection("visitor").get().then((querySnapshot) => {
 
 //función para tabla de coworkers registrados
 let register = document.querySelector('#registCoworker');
-db.collection("coworkers").get().then((querySnapshot) => {
+db.collection("coworkers").onSnapshot((querySnapshot) => {
    register.innerHTML='';
   querySnapshot.forEach((doc) => {
     console.log(`${doc.id} => ${doc.data()}`);
