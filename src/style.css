@@ -65,6 +65,9 @@
     .welcometext{
       text-align: center;
     }
+    .welcome{
+      font-size:40px
+    }
 
       #visitorContainer{
         display:none;
